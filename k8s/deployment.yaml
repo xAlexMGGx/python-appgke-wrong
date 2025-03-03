@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-appgke
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: python-appgke
+  template:
+    metadata:
+      labels:
+        app: python-appgke
+    spec:
+      containers:
+      - name: python-appgke
+        image: gcr.io/icai2025/python-appgke:icai2025
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+
+
