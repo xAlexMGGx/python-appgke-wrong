@@ -15,7 +15,6 @@ spec:
       containers:
       - name: python-appgke
         image: gcr.io/lab6-id/python-appgke:latest
-        imagePullPolicy: Always
         ports:
         - containerPort: 5000
 
